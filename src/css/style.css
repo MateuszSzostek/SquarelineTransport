@@ -1,0 +1,379 @@
+.flex-container {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-right {
+  justify-content: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.nav-container {
+  top: 0;
+  position: fixed;
+  height: 100px;
+}
+
+.nav-elements {
+  position: fixed;
+  right: 50px;
+}
+
+.nav-link {
+  height: 40px;
+  margin: 15px;
+  color: white;
+  z-index: 10000;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  font-size: 1.05rem;
+}
+.nav-link:hover {
+  color: #CA6868;
+  cursor: pointer;
+}
+
+body, html {
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  color: #666;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.parallax1 {
+  background: url("../img/image_1.jpg");
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.parallax2 {
+  background: url("../img/image_2.jpg");
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+}
+
+.parallax1, .parallax2, .parallax3, .parallax4 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.landing-heading {
+  padding: 25px;
+  margin: 0;
+  text-align: left;
+  right: 0;
+  background-color: #202020;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-shadow: 0 0 10px #000;
+}
+.landing-heading h1 {
+  font-size: 3rem;
+}
+.landing-heading h1:nth-child(1) {
+  color: #CA6868;
+  margin: 0 0 5px 0;
+}
+.landing-heading h1:nth-child(2) {
+  color: white;
+  margin: 5px 0 0 0;
+}
+
+.logo {
+  position: fixed;
+  width: 64px;
+  height: 64px;
+  background-color: #CA6868;
+  top: 15px;
+  left: 15px;
+}
+
+.heading-sm {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  color: #fff;
+  font-size: 250%;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px #000;
+}
+
+.two-col {
+  float: left;
+  width: 42%;
+  padding: 0 4%;
+  text-align: left;
+}
+
+section {
+  overflow: auto;
+  padding: 50px 80px;
+}
+
+.dark {
+  overflow: auto;
+  padding: 50px 80px;
+  background-color: #323232;
+  color: #f2f2f2;
+}
+
+.landing-container, .services-container, .contact-container {
+  width: 100vw;
+}
+
+.contact-container {
+  background-color: #202020;
+}
+
+.landing-container {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.services-container {
+  height: auto;
+}
+
+.description-container {
+  width: 100vw;
+  background-color: #202020;
+  padding: 50px 0 50px 0;
+}
+
+.description-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.content-border {
+  max-width: 1400px;
+  width: 1400px;
+}
+
+.desc-1, .desc-2 {
+  padding: 0 30px 0 30px;
+}
+
+.grid-cards-container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  justify-items: center;
+  width: 1400px;
+}
+
+.service-card {
+  height: 325px;
+  width: 300px;
+  background-color: #202020;
+  margin-top: 0px;
+  margin-bottom: 60px;
+}
+
+.services-text {
+  margin: 60px 0 60px 0;
+  background-color: #202020;
+  text-align: right;
+  height: 280px;
+  width: 700px;
+}
+
+.truck-img {
+  width: 100%;
+}
+
+.grid-contact-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-items: center;
+  width: 1400px;
+}
+
+.contact-form {
+  z-index: 1;
+  padding: 30px 30px 20px 30px;
+}
+.contact-form h1, .contact-form label, .contact-form input[type=text], .contact-form textarea {
+  z-index: 10;
+}
+.contact-form h1 {
+  text-align: center;
+  font-family: Tahoma, sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+.contact-form label {
+  text-align: left;
+  font-family: Tahoma, sans-serif;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 2px;
+  font-size: 1.05rem;
+}
+
+input[type=text], textarea {
+  height: 40px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: none;
+  background-color: #CA6868;
+  font-size: 1rem;
+  font-weight: 900;
+  max-width: 550px;
+  width: auto;
+  color: white;
+}
+input[type=text]:focus, input[type=text]:active, textarea:focus, textarea:active {
+  outline: none;
+}
+
+.border-shadow {
+  box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.5);
+}
+
+::placeholder, textarea::placeholder {
+  font-family: Tahoma, sans-serif;
+  color: white;
+  opacity: 1;
+  /* Firefox */
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+textarea::placeholder {
+  font-family: Tahoma, sans-serif;
+  color: white;
+  opacity: 1;
+  /* Firefox */
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+textarea {
+  height: 100px;
+  max-width: 550px;
+  min-width: auto;
+  max-height: 550px;
+  min-height: 32px;
+  font-family: Arial;
+  font-weight: 900;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid white;
+  border-radius: 50%;
+  border-top-color: white;
+  animation: 1s spin infinite linear;
+  transition: 0.5s;
+}
+
+.spin-container {
+  display: none;
+  position: absolute;
+  top: 0px;
+}
+.spin-container.anim-in {
+  animation: anim-in ease-in-out 0.5s;
+  animation-fill-mode: forwards;
+}
+.spin-container.anim-out {
+  animation: anim-out ease-in-out 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.footer-container {
+  background-color: #CA6868;
+  height: 30px;
+}
+
+.footer {
+  padding: 5px;
+}
+.footer > h3 {
+  margin: 0;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .content-border, .grid-cards-container, .grid-contact-container {
+    max-width: 1400px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1260px) {
+  .grid-cards-container {
+    grid-template-columns: 50% 50%;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .grid-contact-container {
+    grid-template-columns: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .description-grid {
+    grid-template-columns: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .heading {
+    font-size: 250%;
+  }
+
+  .heading-sm {
+    font-size: 180%;
+  }
+
+  .two-col {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 645px) {
+  .grid-cards-container {
+    grid-template-columns: 100%;
+  }
+}
