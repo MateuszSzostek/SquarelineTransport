@@ -26,14 +26,14 @@ export default () => (
             <div className="message-info "></div>
           </div>
         </form>
-        <div className="contact-details">
+        <div className="contact-details flex-container col align-content-center justify-content-center">
           <p>+ 44 758390368930</p>
           <p>12 Church Street</p>
           <p>Kettering</p>
           <p>NN14 7HG</p>
           <p>info@squarelinetransport.com</p>
         </div>
-        <div className="follow-us">
+        <div className="follow-us flex-container col align-content-center justify-content-center">
           <h2>FOLLOW US</h2>
           <p>FACEBOOK</p>
           <p>INSTAGRAM</p>

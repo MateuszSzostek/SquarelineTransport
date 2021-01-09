@@ -1,6 +1,12 @@
+$main-text-color: #CACACA;
 $secondary-text-color:#CA6868;
 $background-color: #202020;
+$second-background-color: #6A4545;
 
+
+.font-montserrat{
+  font-family: 'Montserrat', sans-serif;
+}
 .flex-container {
     display: flex;
 }
@@ -22,6 +28,14 @@ $background-color: #202020;
 }
 .justify-content-between{
     justify-content: space-between;
+}
+
+.top-gradient{
+  background: rgb(254,246,242);
+  background: -moz-linear-gradient(180deg, rgba(254,246,242,0) 0%, rgba(32,32,32,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(254,246,242,0) 0%, rgba(32,32,32,1) 100%);
+  background: linear-gradient(180deg, rgba(254,246,242,0) 0%, rgba(32,32,32,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fef6f2",endColorstr="#202020",GradientType=1);
 }
 
 .nav-container{
@@ -79,24 +93,24 @@ body, html {
   .landing-heading {
     padding: 25px;
     margin:0;
-    text-align: left;
-    right: 0;
+    text-align: center;
  //   position: absolute;
  //   top: 38%;
     background-color: $background-color;
     text-transform: uppercase;
-    letter-spacing: 8px;
     text-shadow: 0 0 10px #000;
-    & h1 {
-      font-size: 3rem;
-    }
     & h1:nth-child(1){
       color: $secondary-text-color;
       margin:0 0 5px 0;
+      letter-spacing: 13px;
+      font-size: 3.5rem;
+      font-weight: 900;
     }
     & h1:nth-child(2){
+      font-size: 2.5rem;
       color: white;
       margin:5px 0 0 0;
+      letter-spacing: 8px;
     }
   }
   .logo{
@@ -134,7 +148,7 @@ body, html {
     color: #f2f2f2;
   }
   .landing-container, .services-container, .contact-container{
-    width: 100vw;
+    width: 100%;
   }
   .contact-container{
     background-color: $background-color;
@@ -147,9 +161,22 @@ body, html {
     height: auto;
   }
 .description-container{
-  width: 100vw;
+  position: relative;
+  width: 100%;
   background-color: $background-color;
-  padding:50px 0 50px 0;
+  padding:20px 0 20px 0;
+  overflow: hidden;
+  &::before{
+    top: 35%;
+    content:"";
+    position: absolute;
+    width: 2000px;
+    height: 250px;
+    transform:  rotateZ(18deg);
+    background-color:$second-background-color;
+    z-index: 2;
+    overflow: hidden;
+  }
 }
 .description-grid{
   display:grid;
@@ -159,8 +186,36 @@ body, html {
   max-width: 1400px;
   width:1400px;
 }
-.desc-1, .desc-2{
-  padding: 0 30px 0 30px;
+
+.desc-1, .desc-2, .desc-heading{
+  background-color: rgb(0, 0, 0, 0.2);
+}
+
+.desc-1, .desc-2, .desc-heading, .desc-img{
+  z-index: 5;
+  margin: 30px;
+  padding: 15px 40px 15px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  & > p {
+    color:$main-text-color;
+    font-size: 1.2rem;
+  }
+}
+.desc-heading{
+
+  & > h2:nth-child(1) {
+    color:$secondary-text-color;
+    font-size: 4rem;
+    margin: 0;
+  }
+  & > h2:nth-child(2) {
+    color: $main-text-color;
+    font-size: 3rem;
+    margin: 0;
+  }
 }
 .grid-cards-container{
   display: grid;
@@ -174,16 +229,74 @@ body, html {
   background-color:$background-color;
   margin-top: 0px;
   margin-bottom: 60px;
+  & > div:nth-child(1) {
+    margin: 25px;
+  }
+  & > div:nth-child(2),  & > div:nth-child(3){
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: left;
+  }
+  & > div > img{
+    width: 96px;
+    height:96px;
+  }
+  & > div > h2 {
+    font-size: 2.9rem;
+    margin: 0;
+    font-weight: bold;
+    color:$secondary-text-color;
+  }
+  & > div > p {
+    font-size: 1.1rem;
+    margin: 5px 0 0 0;
+    font-weight: bold;
+  }
 }
 .services-text{
+  position: relative;
+  padding-top:50px;
   margin: 60px 0 60px 0; 
   background-color: $background-color;
   text-align: right;
   height: 280px;
   width: 700px;
+  & > h2 {
+    font-weight: 900;
+    margin: 0 40px 0 0 ;
+    text-align: right;
+  }
+  & > h2:nth-child(1){
+    color: $secondary-text-color;
+    font-size: 3.4rem;
+  }
+  & > h2:nth-child(2){
+    color: $main-text-color;
+    font-size: 6.25rem;
+    z-index: 2;
+    position: absolute;
+    right: 50px;
+  }
+  &::after{
+    content:"";
+    background-color:$secondary-text-color;
+    position: absolute;
+    width: 570px;
+    height: 25px;
+    left: 90px;
+    bottom: 110px;
+    z-index: 1;
+  }
 }
+
+
+.filter-shadow{
+  -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+}
+
 .truck-img{
-  width: 100%;
+  width: 75%;
 }
 .grid-contact-container{
   display: grid;
@@ -204,6 +317,7 @@ body, html {
       margin-bottom: 0;
       font-weight: 900;
       font-size: 2.5rem;
+      color: $secondary-text-color;
   }
   & label {
     text-align: left;
@@ -217,6 +331,30 @@ body, html {
   
   padding: 30px 30px 20px 30px;
 }
+
+.contact-details{
+  font-size: 1.1rem;
+  & p{
+    margin: 5px;
+  }
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.follow-us{
+  & p{
+    font-size: 1.1rem;
+    margin: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  & h2{
+    margin-bottom: 10px;
+    font-size: 3rem;
+    color: $secondary-text-color;
+    font-weight: 900;
+  }
+}
+
 input[type=text],textarea {
   height: 40px;
   padding: 20px;
@@ -306,44 +444,311 @@ textarea{
     font-size: 1rem;
   }
 }
+.btn{
+  margin: 15px;
+  width: 200px;
+  height: 40px;
+  background-color: $secondary-text-color;
+  color:$main-text-color;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5); 
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: .3s;
+  &:hover{
+    background-color: $second-background-color;
+  }
+}
+.company-name {
+  & > h1 {
+    padding: 15px 40px 15px 40px;
+    font-size: 6rem;
+    color: white;
+    text-shadow: 0 0 10px #000;
+    background-color: $background-color;
+  }
+}
 @media only screen and (max-width: 1400px){
   .content-border, .grid-cards-container, .grid-contact-container{
     max-width: 1400px;
     width:100%;
   }
 }
+@media only screen and (max-width: 1300px){
+  .company-name {
+    & > h1 {
+      font-size: 5rem;
+    }
+  }
+  .landing-heading{
+    & h1:nth-child(1){
+      font-size: 3rem;
+    }
+    & h1:nth-child(2){
+      font-size: 2rem;
+    } 
+  }
+}
 @media only screen and (max-width: 1260px){
   .grid-cards-container{
     grid-template-columns: 50% 50%;
   }
+  .services-text{
+    height: 210px;
+    & > h2:nth-child(1){
+      font-size: 2.5rem;
+    }
+    & > h2:nth-child(2){
+      font-size: 4.5rem;
+    }
+    &::after{
+      content:"";
+      height: 20px;
+      bottom: 85px;
+    }
+  }
+  .service-card{
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 1080px){
+  .company-name {
+    & > h1 {
+      font-size: 4rem;
+    }
+  }
+  .desc-1, .desc-2, .desc-heading, .desc-img{
+    margin: 15px;
+    padding: 12px 30px 12px 30px;
+    & > p {
+      font-size: 1.1rem;
+    }
+  }
+  .desc-heading{
+    & > h2:nth-child(1) {
+      font-size: 3.3rem;
+    }
+    & > h2:nth-child(2) {
+      font-size: 2.5rem;
+    }
+  }
 }
 @media only screen and (max-width: 1150px)
 {
+  .contact-details{
+    margin-top: 30px;
+  }
   .grid-contact-container{
     grid-template-columns: 100%;
   }
+  .landing-heading{
+    & h1:nth-child(1){
+      margin:0;
+      font-size: 2.2rem;
+    }
+    & h1:nth-child(2){
+      font-size: 1.5rem;
+      margin:0;
+      letter-spacing: 2px;
+    } 
+  }
 }
 
+@media (max-width: 900px) {
+    .heading {
+      font-size: 250%;
+    }
+    .landing-heading{
+      padding: 10px 40px 10px 20px;
+      & h1:nth-child(1){
+        font-size: 1.5rem;
+        letter-spacing: 5px;
+        margin-bottom: 0;
+      }
+      & h1:nth-child(2){
+        font-size: 1rem;
+        line-height: 21px;
+        letter-spacing: 3px;
+        margin-top:0;
+      } 
+    }
+    .company-name {
+      & > h1 {
+        font-size: 3rem;
+      }
+    }
+}
 @media (max-width: 800px) {
   .description-grid{
     grid-template-columns: 100%;
   }
+  .description-container{
+    &::before{
+      transform:  rotateZ(45deg);
+    }
+  }
+  .services-text{
+    width: 450px;
+    height: 165px;
+    & > h2:nth-child(1){
+      font-size: 2rem;
+    }
+    & > h2:nth-child(2){
+      font-size: 3.5rem;
+    }
+    &::after{
+      bottom: 65px;
+      width: 320px;
+    }
+  }
 }
-@media (max-width: 768px) {
-    .heading {
-      font-size: 250%;
+@media (max-width: 700px) {
+
+  .landing-heading{
+    & h1:nth-child(1){
+      font-size: 1.3rem;
+      margin-bottom: 0;
     }
-    .heading-sm {
-      font-size: 180%;
+    & h1:nth-child(2){
+      margin-top:0;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+    } 
+  }
+  .company-name {
+    & > h1 {
+      font-size: 2rem;
     }
-    .two-col {
-      width: 100%;
-      padding: 0;
-      text-align: center;
-    }
+  }
 }
   @media only screen and (max-width: 645px) {
     .grid-cards-container{
       grid-template-columns: 100%;
     }
   }
+  @media only screen and (max-width: 500px) {
+    .contact-form{
+      max-width: 440px;
+      width: 280px;
+    }
+    .grid-contact-container{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      grid-template-columns: unset;
+      padding: 50px 0 15px 0;
+    }
+    .services-text{
+      padding-top:30px;
+      height: 110px;
+      width: 260px;
+      & > h2:nth-child(1){
+        margin-right: 10px;
+        font-size: 1.5rem;
+      }
+      & > h2:nth-child(2){
+        margin-right: 10px;
+        font-size: 2.3rem;
+        right: 0;
+      }
+      &::after{
+        content:"";
+        height: 12px;
+        bottom: 40px;
+        width: 370px;
+      }
+    }
+    .service-card{
+      & > div > h2 {
+        font-size: 2.4rem;
+      }
+      & > div > p {
+        font-size: 1rem;
+    }
+    .desc-1, .desc-2, .desc-heading, .desc-img{
+      margin: 10px 15px 10px 15px;
+      padding: 12px 10px 12px 10px;
+      & > p {
+        font-size: 1rem;
+      }
+    }
+    .desc-heading{
+      & > h2:nth-child(1) {
+        font-size: 1.7rem;
+      }
+      & > h2:nth-child(2) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 390px) {
+  .grid-contact-container{
+    overflow: hidden;
+    padding-top: 40px;
+  }
+  .contact-form{
+    padding:10px;
+    margin: 10px;
+    width: 78vw;
+    & h1{
+      font-size: 1.8rem;
+      margin-top: 15px;
+    }
+    & label {
+      font-size: 1rem;
+    }
+  }
+  input[type=text],textarea {
+    height: 40px;
+    width: 74vw;
+    padding: 10px 15px 10px 15px;
+  }
+  textarea{
+    height: 150px;
+  }
+  .btn{
+    width: 160px;
+  }
+  .contact-details{
+    & > p {
+      font-size: 1rem;
+      margin: 3px;
+    }
+  }
+  .footer-container{
+    max-height: 25px;
+  }
+  .footer{
+    & > h3{
+      font-size: 0.7rem;
+    }
+  }
+  .follow-us{
+    & > h2{
+      font-size: 2.2rem;
+      margin-bottom: 5px;
+    }
+    & > p{
+      font-size: 1rem;
+      margin: 3px;
+    }
+  }
+  .desc-1, .desc-2{
+    & > p {
+      font-size: 1rem;
+    }
+  }
+  .desc-heading{
+    & > h2:nth-child(1) {
+      font-size: 2.5rem;
+    }
+    & > h2:nth-child(2) {
+      font-size: 1.8rem;
+    }
+  }
+}
