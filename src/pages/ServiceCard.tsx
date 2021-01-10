@@ -7,10 +7,9 @@ interface IServiceCardData{
 }
 
 export default (data:IServiceCardData) =>{
-  console.log(typeof data);
   return(
   <React.Fragment>
-    <div className="service-card flex-container col ">
+    <div data-aos="fade-up" className="service-card flex-container col ">
       <div className="flex-container row">
         <img src={data.image}></img>
       </div>

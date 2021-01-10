@@ -4,7 +4,7 @@ export default () => (
   <React.Fragment>
     <div className="contact-container flex-container justify-content-center row">
       <section className="grid-contact-container">
-        <form action="" className="border-shadow contact-form flex-container col justify-content-center align-items-center">
+        <form data-aos="fade-up" action="" className="border-shadow contact-form flex-container col justify-content-center align-items-center">
           <h1>CONTACT US</h1>
           <div className="flex-container col">
             <label >Name</label>
@@ -26,14 +26,14 @@ export default () => (
             <div className="message-info "></div>
           </div>
         </form>
-        <div className="contact-details flex-container col align-content-center justify-content-center">
+        <div data-aos="fade-up" className="contact-details flex-container col align-content-center justify-content-center">
           <p>+ 44 758390368930</p>
           <p>12 Church Street</p>
           <p>Kettering</p>
           <p>NN14 7HG</p>
           <p>info@squarelinetransport.com</p>
         </div>
-        <div className="follow-us flex-container col align-content-center justify-content-center">
+        <div data-aos="fade-up" className="follow-us flex-container col align-content-center justify-content-center">
           <h2>FOLLOW US</h2>
           <p>FACEBOOK</p>
           <p>INSTAGRAM</p>

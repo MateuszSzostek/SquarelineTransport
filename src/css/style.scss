@@ -3,7 +3,18 @@ $secondary-text-color:#CA6868;
 $background-color: #202020;
 $second-background-color: #6A4545;
 
-
+.curtain{
+  width: 100vw;
+  height: 100vw;
+  background-color: $background-color;
+  z-index: 10000;
+  position: fixed;
+  transition: 1s;
+  opacity: 1;
+  &.active{
+    opacity: 0;
+  }
+}
 .font-montserrat{
   font-family: 'Montserrat', sans-serif;
 }
@@ -42,8 +53,10 @@ $second-background-color: #6A4545;
     top:0;
     position: fixed;
     height:100px;
+    z-index: 1000;
 }
 .nav-elements{
+  z-index: 1000;
   position: fixed;
   right: 50px;
 }
@@ -70,26 +83,50 @@ body, html {
     font-family: 'Ubuntu', sans-serif;
     color: #666;
     text-align: center;
-    overflow-x:  hidden;
   }
-  .parallax1 {
-    background: url('../img/image_1.jpg');
+  #parallax1, #parallax2 {
+   // background: url('../images/image_1.jpg');
     min-height: 100%;
     min-width: 100%;
-  }
-  .parallax2 {
-    background: url('../img/image_2.jpg');
-    min-height: 100%;
-    min-width: 100%;
-    height: auto;
-  }
-  .parallax1, .parallax2, .parallax3, .parallax4 {
-   // position: relative;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    &::after{
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    &::before{
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      transition: 2s;
+    }
   }
+  #parallax1{
+    &::after{
+      width: 100vw;
+      height: 100vh;
+    }
+    &::before{
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+  #parallax2{
+    &::after{
+      width: 100vw;
+      height: 100%;
+    }
+    &::before{
+      width: 100vw;
+      height: 100%;
+    }
+  }
+
   .landing-heading {
     padding: 25px;
     margin:0;
@@ -141,6 +178,9 @@ body, html {
     overflow: auto;
     padding: 50px 80px;
   }
+  .app-container{
+    overflow-x: hidden;
+  }
   .dark {
     overflow: auto;
     padding: 50px 80px;
@@ -148,21 +188,23 @@ body, html {
     color: #f2f2f2;
   }
   .landing-container, .services-container, .contact-container{
-    width: 100%;
+    width: 100vw;
   }
   .contact-container{
     background-color: $background-color;
+    overflow: hidden;
   }
   .landing-container{
     height: 100vh;
     min-height: 100vh;
+    width:100%;
   }
   .services-container{
     height: auto;
   }
 .description-container{
   position: relative;
-  width: 100%;
+  width: 100vw;
   background-color: $background-color;
   padding:20px 0 20px 0;
   overflow: hidden;
@@ -303,6 +345,7 @@ body, html {
   grid-template-columns: 33% 33% 33%;
   justify-items: center;
   width: 1400px;
+  overflow: hidden;
 }
 
 .contact-form{
@@ -434,6 +477,7 @@ textarea{
 .footer-container{
   background-color:$secondary-text-color;
   height: 30px;
+  width: 100vw;
 }
 .footer{
   padding:5px;

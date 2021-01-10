@@ -1,13 +1,16 @@
 import React from "react";
 import ServiceCard from "./ServiceCard";
-import Image1 from '../img/clock.svg';
-import Image2 from '../img/driver.svg';
-import Image3 from '../img/award.svg';
-import Image4 from '../img/worker.svg';
+import Image1 from '../images/clock.svg';
+import Image2 from '../images/driver.svg';
+import Image3 from '../images/award.svg';
+import Image4 from '../images/worker.svg';
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
+import BackgroundImage from 'gatsby-background-image'
+
+//import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default () => {
-  console.log(Image1);
-
   const cardsData = [
     {
       id: 1,
@@ -37,14 +40,26 @@ export default () => {
 
   let serviceCards = cardsData.map(s => <ServiceCard key={s.id} image={s.image} name={s.name} desc={s.desc}/>)
 
+  const data = useStaticQuery(graphql`
+  query MyQueryII {
+    file(relativePath: {eq: "image_2.jpg"}) {
+      childImageSharp {
+        fluid(quality: 100){
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+  
+  `);
+
   return(
 <React.Fragment>
     <div className="services-container">
-      <div className="parallax2">
-        <div className="flex-container col align-items-center">
+      <BackgroundImage id="parallax2" className="flex-container col align-items-center" fluid ={data.file.childImageSharp.fluid}>
           <div className="content-border flex-container col justify-content-right">
             <div className="flex-container row justify-content-right">
-              <div className="services-text">
+              <div data-aos="fade-up" className="services-text">
                 <h2>OUR SERVICES</h2>
                 <h2>ARE</h2>
               </div>
@@ -55,8 +70,7 @@ export default () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+      </BackgroundImage>
     </div>
   </React.Fragment>
   )
