@@ -1,3 +1,8 @@
+@mixin marg-pad($margin, $padding){
+  margin: $margin;
+  padding: $padding;
+}
+
 $main-text-color: #CACACA;
 $secondary-text-color:#CA6868;
 $background-color: #202020;
@@ -56,22 +61,55 @@ $second-background-color: #6A4545;
     z-index: 1000;
 }
 .nav-elements{
-  z-index: 1000;
+  transition: .9;
   position: fixed;
   right: 50px;
 }
 .nav-link{
+  position: relative;
+  z-index: 40;
   height: 40px;
+  width: 96px;
   margin: 15px;
   color: white;
-  z-index: 10000;
   font-weight: bold;
   letter-spacing: 1px;
   transition: .3s;
   font-size: 1.05rem;
+  &::after{
+    content:"";
+    transition: .3s;
+    position: absolute;
+    width: 115px;
+    height: 100px;
+    top:-135px;
+    left:-10px;
+    background-color: $background-color;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: rotateZ(-25deg);
+    z-index: -1;
+  }
+  &:hover {
+    &::after{
+      top:-70px;
+      z-index: -1;
+      transform: rotateZ(13deg);
+    }
+  }
+
+  & > p {
+    z-index: 2000;
+    position: relative;
+    margin: 0;
+  }
   &:hover{
-    color:$secondary-text-color;
     cursor: pointer;
+  }
+  & > p {
+    position: relative;
+    z-index: 2000;
+    
   }
 }
 
@@ -140,11 +178,11 @@ body, html {
       color: $secondary-text-color;
       margin:0 0 5px 0;
       letter-spacing: 13px;
-      font-size: 3.5rem;
+      font-size: 2.8rem;
       font-weight: 900;
     }
     & h1:nth-child(2){
-      font-size: 2.5rem;
+      font-size: 2.1rem;
       color: white;
       margin:5px 0 0 0;
       letter-spacing: 8px;
@@ -509,12 +547,28 @@ textarea{
 .company-name {
   & > h1 {
     padding: 15px 40px 15px 40px;
-    font-size: 6rem;
+    font-size: 5rem;
     color: white;
     text-shadow: 0 0 10px #000;
     background-color: $background-color;
   }
 }
+
+.menu-button{
+  width:0;
+  display: none;
+}
+.menu-element {
+  @include marg-pad(0,0);
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  left: 0;
+  background-color: $main-text-color;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
 @media only screen and (max-width: 1400px){
   .content-border, .grid-cards-container, .grid-contact-container{
     max-width: 1400px;
@@ -524,15 +578,15 @@ textarea{
 @media only screen and (max-width: 1300px){
   .company-name {
     & > h1 {
-      font-size: 5rem;
+      font-size: 4.5rem;
     }
   }
   .landing-heading{
     & h1:nth-child(1){
-      font-size: 3rem;
+      font-size: 2.6rem;
     }
     & h1:nth-child(2){
-      font-size: 2rem;
+      font-size: 1.9rem;
     } 
   }
 }
@@ -555,13 +609,13 @@ textarea{
     }
   }
   .service-card{
-    width: 95%;
+    width: 90%;
   }
 }
 @media only screen and (max-width: 1080px){
   .company-name {
     & > h1 {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
   }
   .desc-1, .desc-2, .desc-heading, .desc-img{
@@ -626,6 +680,118 @@ textarea{
     }
 }
 @media (max-width: 800px) {
+  .nav-elements.active.close{
+    animation: slideOutMenu 0.3s ease-out;
+    animation-fill-mode: forwards;
+  }
+  .nav-elements.active{
+    opacity:1;
+    top: 0;
+    animation: slideMenu 0.3s ease-out;
+        animation-fill-mode: forwards;
+        & .nav-link {
+          transition: unset;
+          color:$main-text-color;
+          opacity: 0;
+          animation: fadeIn 1s ease-out;
+          animation-fill-mode: forwards;
+          
+        }
+        & .nav-link:nth-child(1){
+            animation-delay: .3s;
+        }
+        & .nav-link:nth-child(2){
+            animation-delay: .4s;
+        }
+        & .nav-link:nth-child(3){
+            animation-delay: .5s;
+        }
+        & .nav-link:nth-child(4){
+            animation-delay: .6s;
+        }
+  }
+  .nav-link.active{
+    font-size: 2.5rem;
+    margin: 20px;
+    width: 300px;
+    &::after{
+      content: unset;
+    }
+    &:hover {
+      &::after{
+        content: unset;
+      }
+    }
+  }
+  .nav-elements{
+    min-height: 500px;
+    width: 100%;
+    height: 100%;
+    background-color: $background-color;
+    position: fixed;
+    left:-100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: -100vh;
+    left:0;
+    opacity:0;
+  }
+  .menu-button {
+    top: 33px;
+    right:30px;
+    z-index: 2000;
+    display: flex;
+    position: fixed;
+    width: 40px;
+    height: 36px;
+    cursor: pointer;
+
+  & > div:nth-child(1) {
+      background-color: $main-text-color;
+      top: 0;
+  }
+
+  & > div:nth-child(2) {
+      background-color: $main-text-color;
+      top: 15px;
+  }
+
+  & > div:nth-child(3) {
+      background-color: $main-text-color;
+      top: 30px;
+  }
+
+  &.hover > div:nth-child(1) {
+      transform: translateY(-3px);
+      filter: brightness(80%);
+  }
+
+  &.hover > div:nth-child(2) {
+      filter: brightness(80%);
+  }
+
+  &.hover > div:nth-child(3) {
+      transform: translateY(3px);
+      filter: brightness(80%);
+  }
+
+  &.open > div:nth-child(1) {
+      background-color: $main-text-color;
+      transform: rotate(45deg) translateY(14.5px) translateX(7px);
+  }
+
+  &.open > div:nth-child(2) {
+      background-color: transparent;
+      transform: translateX(-50px);
+  }
+
+  &.open > div:nth-child(3) {
+      background-color: $main-text-color;
+      transform: rotate(-45deg) translateY(-14.5px) translateX(7px);
+  }
+}
   .description-grid{
     grid-template-columns: 100%;
   }
@@ -731,6 +897,13 @@ textarea{
   }
 }
 @media only screen and (max-width: 390px) {
+  .desc-heading{
+    padding:15px;
+  }
+  .menu-button {
+    top: 15px;
+    right:15px;
+  }
   .grid-contact-container{
     overflow: hidden;
     padding-top: 40px;
@@ -783,6 +956,7 @@ textarea{
     }
   }
   .desc-1, .desc-2{
+    padding: 15px;
     & > p {
       font-size: 1rem;
     }
@@ -795,4 +969,29 @@ textarea{
       font-size: 1.8rem;
     }
   }
+  .nav-link.active{
+    font-size: 1.8rem;
+    margin: 10px;
+    width: 200px;
+    &::after{
+      content: unset;
+    }
+    &:hover {
+      &::after{
+        content: unset;
+      }
+    }
+  }
+}
+@keyframes slideMenu {
+  0%   {transform: translateY(-100vh); opacity:0}
+  100% {transform: translateY(0); opacity:1}
+}
+@keyframes slideOutMenu {
+  0%   {transform: translateY(0); opacity:1}
+  100% {transform: translateY(-100vh); opacity:0}
+}
+@keyframes fadeIn{
+  0%   {transform: translateX(-40px); opacity: 0;}
+  100% {transform: translateX(0px); opacity: 1;}
 }

@@ -38,7 +38,7 @@ export default () => {
     },
   ]
 
-  let serviceCards = cardsData.map(s => <ServiceCard key={s.id} image={s.image} name={s.name} desc={s.desc}/>)
+  let serviceCards = cardsData.map(s => <ServiceCard data-aos="fade-up" key={s.id} image={s.image} name={s.name} desc={s.desc}/>)
 
   const data = useStaticQuery(graphql`
   query MyQueryII {
