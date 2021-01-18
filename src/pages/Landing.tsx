@@ -20,10 +20,14 @@ export default () => {
       <div className="landing-container">
         <BackgroundImage id="parallax1" className="flex-container col justify-content-center align-items-center"
         fluid ={data.file.childImageSharp.fluid}>
-          <div data-aos="fade-up" className="company-name flex-container row">
+          <div data-sal="slide-up"
+  data-sal-delay="300"
+  data-sal-easing="ease" className="company-name flex-container row">
             <h1>SQUERLINE TRANSPORT</h1>
           </div>
-          <div data-aos="fade-up" className="landing-heading flex-container col">
+          <div data-sal="slide-up"
+  data-sal-delay="300"
+  data-sal-easing="ease" className="landing-heading flex-container col">
             <h1>EXCELLENCE DELIVERED</h1>
             <h1>YOUR DEDICATED TRANSPORT SERVICES</h1>
           </div>

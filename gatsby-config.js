@@ -2,6 +2,7 @@ const path = require(`path`)
 
 module.exports = {
   plugins: [
+    `gatsby-plugin-scroll-reveal`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

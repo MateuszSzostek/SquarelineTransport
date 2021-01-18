@@ -6,8 +6,8 @@ import Services from "./Services";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import "../css/style.css"
-import AOS from "aos";
-import 'aos/dist/aos.css'
+//import AOS from "aos";
+//import 'aos/dist/aos.css'
 import { useScrollBy } from 'react-use-window-scroll';
 
 export default () => {
@@ -26,7 +26,7 @@ export default () => {
     contactRef
   ]
 
-  AOS.init();
+  //AOS.init();
 
 
   function scrollToFunc(where:number) {

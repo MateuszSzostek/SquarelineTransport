@@ -59,7 +59,9 @@ export default () => {
       <BackgroundImage id="parallax2" className="flex-container col align-items-center" fluid ={data.file.childImageSharp.fluid}>
           <div className="content-border flex-container col justify-content-right">
             <div className="flex-container row justify-content-right">
-              <div data-aos="fade-up" className="services-text">
+              <div data-sal="slide-up"
+  data-sal-delay="300"
+  data-sal-easing="ease" className="services-text">
                 <h2>OUR SERVICES</h2>
                 <h2>ARE</h2>
               </div>
