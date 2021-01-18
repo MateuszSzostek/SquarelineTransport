@@ -16,25 +16,25 @@ export default () => {
       id: 1,
       image: Image1,
       name: "QUICK",
-      desc: "Quick lorem ipsum lorm ipsum"
+      desc: "We pay special attention to ensure that our services are performed on time."
     },
     {
       id: 2,
       image: Image2,
       name: "QUALIFIED",
-      desc: "Qualified lorem ipsum lorm ipsum"
+      desc: "All our drivers have the CPC certificate and are fully qualified to operate all our vehicles."
     },
     {
       id: 3,
       image: Image3,
       name: "QUALITY",
-      desc: "Quality lorem ipsum lorm ipsum"
+      desc: "We provide our clients with professional service and the use of the best means of transport adapted to the transported cargo."
     },
     {
       id: 4,
       image: Image4,
-      name: "COMFORT",
-      desc: "Comfort lorem ipsum lorm ipsum"
+      name: "SAFETY",
+      desc: "We keep our trucks in pristine condition to optimise our fleet’s performance, reliability, quality and above all safety."
     },
   ]
 

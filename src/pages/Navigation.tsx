@@ -1,4 +1,5 @@
 import React, { useState }  from "react";
+import Logo from "../images/st_logo.svg";
 
 interface IScrollFunc{
   scrollTo: any;
@@ -76,6 +77,7 @@ export default (props: IScrollFunc) => {
     <React.Fragment>
       <div className="nav-container flex-container row justify-content-between">
         <div className="logo flex-container">
+        <img className="truck-img filter-shadow" src={Logo}></img>
         </div>
         <div className={"nav-elements flex-container row"  + (menuOpen ? " active" : "") + (menuClose ? " close" : "")}>
           {links}

@@ -59,6 +59,7 @@
 .nav-elements {
   transition: 0.9;
   position: fixed;
+  top: 20px;
   right: 50px;
 }
 
@@ -80,7 +81,7 @@
   position: absolute;
   width: 115px;
   height: 100px;
-  top: -135px;
+  top: -153px;
   left: -10px;
   background-color: #202020;
   border-bottom-left-radius: 10px;
@@ -179,11 +180,10 @@ body, html {
 
 .logo {
   position: fixed;
-  width: 64px;
-  height: 64px;
-  background-color: #CA6868;
-  top: 15px;
-  left: 15px;
+  width: 256px;
+  height: 128px;
+  top: -20px;
+  left: 0px;
 }
 
 .heading-sm {
@@ -682,6 +682,10 @@ textarea {
   }
 }
 @media (max-width: 800px) {
+  .logo {
+    top: -15px;
+  }
+
   .nav-elements.active.close {
     animation: slideOutMenu 0.3s ease-out;
     animation-fill-mode: forwards;
@@ -887,6 +891,11 @@ textarea {
   }
 }
 @media only screen and (max-width: 390px) {
+  .logo {
+    top: -25px;
+    left: -25px;
+  }
+
   .desc-heading {
     padding: 15px;
   }

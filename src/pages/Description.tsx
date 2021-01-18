@@ -10,18 +10,23 @@ export default () => (
         <div data-sal="slide-up"
   data-sal-delay="300"
   data-sal-easing="ease" className="desc-heading">
-          <h2>LOREM IPSUM</h2>
-          <h2>LOREM IPSUM LOREM IPSUM LOREM IPSUM </h2>
+          <h2>CARE FLOWS</h2>
+          <h2>THROUGH OUR ROUTES</h2>
         </div>
         <div data-sal="slide-up"
   data-sal-delay="300"
   data-sal-easing="ease"className="desc-1">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget interdum mi. Sed sit amet orci sed nibh tincidunt volutpat. Nunc nec vulputate ligula, id aliquam ipsum. Vestibulum accumsan eros ante, eu fermentum orci ultrices sed. Ut accumsan justo erat. Donec gravida mauris a lorem finibus, vitae mollis arcu condimentum. Curabitur posuere tincidunt est, finibus ornare sapien cursus sed. Morbi consequat eu nulla ac tempus. In hac habitasse platea dictumst. Mauris a ante sed est eleifend bibendum. Proin fermentum fermentum libero porttitor sagittis. Maecenas id vulputate massa. Praesent ac mauris vel dui sagittis aliquet. Etiam dapibus ultricies odio. Vivamus sit amet nisl non nisl hendrerit pulvinar ut in metus.</p>
+          <p>Do you have heavy loads to transport? No need to worry. We can transport loads of any size. 
+            We are well-equipped with the required vehicles, equipment and tools to transport your heavy
+             loads to anywhere in the UK or Europe. We have articulated vehicles in place. 
+            You can rely on our services.</p>
         </div>
         <div data-sal="slide-up"
   data-sal-delay="300"
   data-sal-easing="ease" className="desc-2">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget interdum mi. Sed sit amet orci sed nibh tincidunt volutpat. Nunc nec vulputate ligula, id aliquam ipsum. Vestibulum accumsan eros ante, eu fermentum orci ultrices sed. Ut accumsan justo erat. Donec gravida mauris a lorem finibus, vitae mollis arcu condimentum. Curabitur posuere tincidunt est, finibus ornare sapien cursus sed. Morbi consequat eu nulla ac tempus. In hac habitasse platea dictumst. Mauris a ante sed est eleifend bibendum. Proin fermentum fermentum libero porttitor sagittis. Maecenas id vulputate massa. Praesent ac mauris vel dui sagittis aliquet. Etiam dapibus ultricies odio. Vivamus sit amet nisl non nisl hendrerit pulvinar ut in metus.</p>
+          <p>We aim to deliver high standards of care, with unparalleled customer service to retain and grow 
+            our client base. With tailor-made services and unique systems to suit your needs, we offer a 
+            complete package encompassing all your storage, pick-pack and distribution needs.</p>
         </div>
         <div data-sal="slide-up"
   data-sal-delay="300"
