@@ -6,7 +6,7 @@ export default () => (
       <section className="grid-contact-container">
         <form data-sal="slide-up"
   data-sal-delay="300"
-  data-sal-easing="ease"action="" className="border-shadow contact-form flex-container col justify-content-center align-items-center">
+  data-sal-easing="ease"action="https://formspree.io/f/xzbkorkv" method="POST" className="border-shadow contact-form flex-container col justify-content-center align-items-center">
           <h1>CONTACT US</h1>
           <div className="flex-container col">
             <label >Name</label>
@@ -14,11 +14,11 @@ export default () => (
           </div>
           <div className="flex-container col" >
             <label >Email address</label>
-            <input type="text" id="email" name="email" placeholder="Your email address" ></input>
+            <input type="text" id="email" name="_replyto" placeholder="Your email address" ></input>
           </div>
           <div className="flex-container col">
             <label >Message</label>
-            <textarea name="text" id="text" placeholder="Your message"></textarea>
+            <textarea name="message" id="text" placeholder="Your message"></textarea>
           </div>
           <button className="btn mt-15">Send</button>
           <div className="center-all flex-container  col info-container">
