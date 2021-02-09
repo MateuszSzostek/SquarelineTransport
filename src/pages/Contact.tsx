@@ -5,11 +5,13 @@ export default () => (
     <div className="contact-container flex-container justify-content-center row">
       <section className="grid-contact-container">
         <form 
-        name="contact" method="POST" data-netlify="true" 
+         method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" 
         data-sal="slide-up"
         data-sal-delay="300"
         data-sal-easing="ease"
         className="border-shadow contact-form flex-container col justify-content-center align-items-center">
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="contact" />
           <h1>CONTACT US</h1>
           <div className="flex-container col">
             <label >Name</label>
