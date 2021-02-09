@@ -901,6 +901,27 @@ textarea{
     }
   }
 }
+@media only screen and (max-height: 400px)
+{
+  .nav-elements{
+    max-height: 100vh;
+    min-height: unset;
+  }
+  .nav-link.active{
+    font-size: 1.8rem;
+    margin: 10px;
+    width: 200px;
+    &::after{
+      content: unset;
+    }
+    &:hover {
+      &::after{
+        content: unset;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 390px) {
   .logo{
     top: -25px;

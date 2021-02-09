@@ -9,6 +9,7 @@ import "../css/style.css"
 //import AOS from "aos";
 //import 'aos/dist/aos.css'
 import { useScrollBy } from 'react-use-window-scroll';
+import Head from "../components/Head";
 
 export default () => {
 
@@ -40,6 +41,7 @@ export default () => {
 
   return(
     <React.Fragment>
+      <Head description="Welcome on Squareline Transport company page. We offer various services of lorry transport. " />
       <div className="app-container">
         <Navigation scrollTo={scrollToFunc}/>
         <div ref={homeRef}>

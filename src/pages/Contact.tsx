@@ -6,7 +6,9 @@ export default () => (
       <section className="grid-contact-container">
         <form data-sal="slide-up"
   data-sal-delay="300"
-  data-sal-easing="ease"action="https://formspree.io/f/xzbkorkv" method="POST" className="border-shadow contact-form flex-container col justify-content-center align-items-center">
+  data-sal-easing="ease"
+  name="contact" method="POST" data-netlify="true" 
+  className="border-shadow contact-form flex-container col justify-content-center align-items-center">
           <h1>CONTACT US</h1>
           <div className="flex-container col">
             <label >Name</label>
