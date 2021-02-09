@@ -4,11 +4,12 @@ export default () => (
   <React.Fragment>
     <div className="contact-container flex-container justify-content-center row">
       <section className="grid-contact-container">
-        <form data-sal="slide-up"
-  data-sal-delay="300"
-  data-sal-easing="ease"
-  name="contact" method="POST" data-netlify="true" 
-  className="border-shadow contact-form flex-container col justify-content-center align-items-center">
+        <form 
+        name="contact" method="POST" data-netlify="true" 
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        className="border-shadow contact-form flex-container col justify-content-center align-items-center">
           <h1>CONTACT US</h1>
           <div className="flex-container col">
             <label >Name</label>
@@ -16,7 +17,7 @@ export default () => (
           </div>
           <div className="flex-container col" >
             <label >Email address</label>
-            <input type="text" id="email" name="_replyto" placeholder="Your email address" ></input>
+            <input type="text" id="email" name="email" placeholder="Your email address" ></input>
           </div>
           <div className="flex-container col">
             <label >Message</label>
