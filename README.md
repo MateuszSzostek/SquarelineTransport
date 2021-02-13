@@ -4,7 +4,7 @@
 <h1 align = "center" >SquareLine Transport</h1>
 <p align = "center" > A static website made for a transport company with services offered and contact details. Website has been created in Gatsby framework. </p>
 
-# Getting Started
+# Getting Startedgit
 
 ### Prerequisites
 Running a project requires Node.js installed and an editor that allows you to use its commands. I recommend using Visual Studio Code. You can download it [here](https://code.visualstudio.com/). Node.js can be downloaded from [there](https://nodejs.org/en/). 
@@ -26,7 +26,7 @@ The website has the following features:
 - SEO with react helmet
 
 ### Live 
-To see the the live version of website please go to [squareline-transport.netlify.app](https://www.squareline-transport.netlify.app).
+To see the the live version of website please go to [https://www.squareline-transport.netlify.app](https://squareline-transport.netlify.app/).
 
 ### Author
 Teh website has been created by [Mateusz Szostek](https://www.linkedin.com/in/mateusz-szostek-351978143/).
