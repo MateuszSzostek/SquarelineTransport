@@ -36,10 +36,10 @@ export default () => (
         <div data-sal="slide-up"
   data-sal-delay="300"
   data-sal-easing="ease" className="contact-details flex-container col align-content-center justify-content-center">
-          <p>+ 44 758390368930</p>
-          <p>12 Church Street</p>
-          <p>Kettering</p>
-          <p>NN14 7HG</p>
+          <p>+ (phone placeholder)</p>
+          <p>(address placeholder)</p>
+          <p>(address placeholder)</p>
+          <p>(address placeholder)</p>
           <p>info@squarelinetransport.com</p>
         </div>
         <div data-sal="slide-up"
