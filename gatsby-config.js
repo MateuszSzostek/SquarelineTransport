@@ -2,15 +2,17 @@ const path = require(`path`)
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-scroll-reveal`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`),
+        // The unique name for each instance
+        name: `pages`,
+        // Path to the directory
+        path: `${__dirname}/src/images/`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
   ],
-};
+}

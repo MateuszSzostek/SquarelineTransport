@@ -1,6 +1,5 @@
 import React from "react";
 import TruckImg from "../images/frontal-truck.svg";
-import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
 
 export default () => (
